@@ -1,0 +1,53 @@
+-- MySQL dump 10.13  Distrib 8.0.46, for Linux (x86_64)
+--
+-- Host: localhost    Database: paquetes2
+-- ------------------------------------------------------
+-- Server version	8.0.46-0ubuntu0.24.04.3
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `CLIENTE`
+--
+
+DROP TABLE IF EXISTS `CLIENTE`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `CLIENTE` (
+  `curp_cliente` varchar(18) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `apellido_paterno` varchar(100) NOT NULL,
+  `apellido_materno` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`curp_cliente`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `CLIENTE`
+--
+
+LOCK TABLES `CLIENTE` WRITE;
+/*!40000 ALTER TABLE `CLIENTE` DISABLE KEYS */;
+INSERT INTO `CLIENTE` VALUES ('CRUZ091011HQRZNS09','Miguel','Cruz',NULL),('FLOR101112MQTRRS10','Fernanda','Flores','Ruiz'),('GARC010203HQRMLN01','Carlos','García','López'),('GONZ050607HQRNML05','Jorge','González','Morales'),('HERN040506MQTRSN04','Ana','Hernández','Torres'),('LOPE030405HDFPNS03','Luis','López','Pérez'),('MART020304MQTRRN02','Mariana','Martínez','Ramírez'),('PERE080910MQTRRL08','Laura','Pérez','Ramírez'),('RODR070809HDFMRL07','Diego','Rodríguez','Mendoza'),('SANC060708MQTRNZ06','Sofía','Sánchez','Núñez');
+/*!40000 ALTER TABLE `CLIENTE` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2026-09-21 14:20:01
